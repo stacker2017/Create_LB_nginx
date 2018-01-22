@@ -5,6 +5,6 @@
     - name: Create Azure Deploy
       azure_rm_deployment:
         state: present
-        resource_group_name: dev-ops-niloofar5
+        resource_group_name: {{ rs_group }}
         template_link: 'https://raw.githubusercontent.com/stacker2017/azure-temp/master/azureloadbalancertemp.json'
         parameters_link: 'https://raw.githubusercontent.com/stacker2017/azure-temp/master/azureloadbalancerparam.json'
