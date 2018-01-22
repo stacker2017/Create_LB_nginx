@@ -7,9 +7,13 @@
         state: present
         resource_group_name: "{{ rs_group }}"
         template_link: 'https://raw.githubusercontent.com/stacker2017/azure-temp/master/azureloadbalancertemp.json'
-        parameters_link: 'https://raw.githubusercontent.com/stacker2017/azure-temp/master/azureloadbalancerparam.json'
         parameters:
            storageAccountName:
               value: "{{ storage_name }}"
+           adminUsername:
+              value: "{{ user_name }}"
+           adminPassword:
+              value: "{{ password }}"          
            dnsNameforLBIP:
                value: "{{ dns_name }}"
+               
